@@ -1,1 +1,80 @@
 /* ini css */
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* css header */
+header {
+    text-align: center;
+}
+
+
+/* css main  */
+
+/* css form pengisian*/
+main {
+    display: flex;
+}
+
+aside {
+    padding: 40px;
+    padding-top: 2px;
+    width: 50%;
+}
+
+form {
+    background-color: #FFE2E2;
+    padding: 30px;
+    padding-top: 2px;
+    border-radius: 10px;
+}
+
+.keterangan {
+    margin-bottom: 12px;
+}
+
+.input-number {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.button {
+    margin: 35px 0 0 0;
+}   
+
+button {
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+}
+
+.button-color {
+    background-color: #8785A2;
+    color: white
+}
+
+.button-reset {
+    background-color: rgb(29, 24, 24);
+    color: white;
+}
+
+
+
+
+/* css aside hasil MBI*/
+
+.nilai-bmi {
+    text-align: center;
+}
+
+.form-hasil {
+    border: 1px solid;
+    text-align: center;
+}
+
+/* css footer */
+footer {
+    text-align: center ;
+}

@@ -4,11 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Berat Badan Ideal</title>
     <link rel="stylesheet" href="css\style.css">
 </head>
 
 <body>
-    
+    <header>
+        <h1>Kalkulator MBI</h1>
+    </header>
+
+    <main>
+       <aside>
+        <form>
+            <div>
+                <h4 class="keterangan">Jenis Kelamin</h4>
+                <input type="radio" id="pria" value="pria" name="jenis-kelamin">
+                <label for="pria">Pria</label>
+                <br>
+                <input type="radio" id="wanita" value="wanita" name="jenis-kelamin">
+                <label for="wanita">Wanita</label>
+            </div>
+
+            <div>
+                <h4 class="keterangan">Berat Badan (kg)</h4>
+                <input type="number" class="input-number" id="berat" placeholder="Isi dengan benar">
+            </div>
+
+            <div>
+                <h4 class="keterangan">Umur (Tahun)</h4>
+                <input type="number" class="input-number" id="Umur" placeholder="Isi dengan benar">
+            </div>
+
+            <div>
+                <h4 class="keterangan">Tinggi Badan (cm)</h4> 
+                <input type="number" class="input-number" id="tinggi" placeholder="Isi dengan benar">
+            </div>
+            <p></p>
+
+            <div class="button">
+                <button class="button-color" id="submit">Lihat hasil</button>
+                <button class="button-reset">Reset</button>
+            </div>
+        </form>
+
+        <article>
+            <p>Berat ideal adalah berat badan yang paling sehat untuk tinggi dan komposisi tubuh seseorang, sering dihitung menggunakan Indeks Massa Tubuh (IMT). Berat ini membantu mengurangi risiko penyakit dan menjaga keseimbangan kesehatan secara keseluruhan.
+            <br>Mari lihat apakah berat badan mu ideal atau tidak di sini
+            </p>
+        </article>
+
+        </article>
+       </aside>
+
+        <aside>
+            <section>
+                <h3 style="text-align: center;">Hasil</h3>
+
+                 <div class="form-hasil">
+                    <p>Nilai BMI kamu akan muncul di bawah ini</p>
+                    <h1 class="nilai-bmi" id="hasil-bmi">??</h1>
+                    <p id="indeks-hasil">Berat badan mu itu kira-kira ideal ga ya?</p>
+                    <p id="penjelasan-hasil"></p>
+
+                </div>
+                <article>
+                    <h4 class="keterangan">Keunggulan Fitur :</h4>
+                    <ol>
+                        <li>Menghitung Berat Badan</li>
+                        <li>Menentukan kategori Berat Badan ideal atau tidak</li>
+                        <li>Mempersiapkan Program penurunan berat badan</li>
+                    </ol>
+                    <br>
+                    <article>
+                        Kalkulator ini hanya boleh digunakan oleh orang dewasa (ibu hamil dan menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus di ambil selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter
+                    </article>
+            </section>
+        </aside>
+    </main>
+
+    <footer>
+        <h6>Made By Ranu Kumbolo</h6>
+    </footer>
+
+    <script src="js\script.js"></script>
 </body>
+
 </html>
