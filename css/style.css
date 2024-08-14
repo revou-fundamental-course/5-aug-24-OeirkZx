@@ -1,6 +1,7 @@
 /* ini css */
 
 body {
+    background-color: #FFC7C7;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -28,6 +29,7 @@ form {
     padding: 30px;
     padding-top: 2px;
     border-radius: 10px;
+    box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
 }
 
 .keterangan {
@@ -35,9 +37,12 @@ form {
 }
 
 .input-number {
-    border: 1px solid;
-    border-radius: 5px;
+    background-color: #FFE2E2;
+    outline: none;
+    border: none;
+    width: 50%;
     padding: 6px;
+    border-bottom: 1px solid;
 }
 
 .button {
@@ -60,18 +65,29 @@ button {
     color: white;
 }
 
+#validasi {
+    color: red;
+}
+
 
 
 
 /* css aside hasil MBI*/
 
+.hasil {
+    text-align: center;
+}
+
 .nilai-bmi {
     text-align: center;
 }
 
-.form-hasil {
-    border: 1px solid;
+.form-hasil {  
+    background-color: #FFE2E2;
+    padding: 10px;
+    border: none;
     text-align: center;
+    border-radius: 10px;
 }
 
 /* css footer */

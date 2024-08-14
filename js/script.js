@@ -23,8 +23,20 @@ button.addEventListener("click", function(Event){
 
         const tinggi = parseInt(document.getElementById('tinggi').value)
         const berat = parseInt(document.getElementById('berat').value)
-      
+        const umur = document.getElementById('umur');
+        const pria = document.getElementById('pria');
+        const wanita = document.getElementById('wanita');
+        const validasi = document.getElementById('validasi');
+        
+        // memastikan user sudah memasukkan semua data
+        if(tinggi =='' || berat =='' || umur=='' || (pria.checked==false && wanita.checked==false)){
+                validasi.innerHTML = `All fields are required!`;
+                console.log(validasi)
+                return
+              }else{
 
+                validasi.innerHTML = ''
+              
         // mengubah satuan tinggi badan dari cm menjadi m
         const tinggiM = tinggi/100;
 
@@ -58,9 +70,12 @@ button.addEventListener("click", function(Event){
             }
 
         // indeks yang akan ditampilkan ke user
-        
+            
         indeksHasil.innerHTML = "Kamu " + status; 
         penjelasanHasil.innerHTML = explanation;
+        
+
+              }
 
 
 
