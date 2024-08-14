@@ -15,38 +15,52 @@
 // mengambil elemen button dari html
 let button = document.getElementById('submit');
 
-button.addEventListener("click", function(Event){
-        // preventDefault untuk mencegah perilaku default button agar tidak merefresh halaman saat ditekan
-        Event.preventDefault();
+button.addEventListener("click", function(){
 
         // mengumpulkan data berat badan dan tinggi badan
-
         const tinggi = parseInt(document.getElementById('tinggi').value)
         const berat = parseInt(document.getElementById('berat').value)
         const umur = document.getElementById('umur');
         const pria = document.getElementById('pria');
         const wanita = document.getElementById('wanita');
         const validasi = document.getElementById('validasi');
-        
-        // memastikan user sudah memasukkan semua data
-        if(tinggi =='' || berat =='' || umur=='' || (pria.checked==false && wanita.checked==false)){
-                validasi.innerHTML = `All fields are required!`;
-                console.log(validasi)
-                return
-              }else{
+        const main = document.getElementById('main')
 
-                validasi.innerHTML = ''
-              
         // mengubah satuan tinggi badan dari cm menjadi m
         const tinggiM = tinggi/100;
 
-        // mengambil elemen dari html untuk dimanipulasi isinya
+         // mengambil elemen dari html untuk dimanipulasi isinya
         const hasil = document.getElementById('hasil-bmi')
-        const indeksHasil = document.getElementById("indeks-hasil");
-        const penjelasanHasil = document.getElementById('penjelasan-hasil')
+              const indeksHasil = document.getElementById("indeks-hasil");
+              const penjelasanHasil = document.getElementById('penjelasan-hasil')
+      
+              // pengolahan data agar mendapatkan hasil menggunakan rumus bmi
+              const bmi = (berat/(tinggiM * tinggiM)).toFixed(1)
+        
+        // memastikan user sudah memasukkan semua data
+        if(tinggi =='' || isNaN(tinggi) || berat =='' || isNaN(berat) || umur=='' || (pria.checked==false && wanita.checked==false)){
+                validasi.innerHTML = `Data tidak boleh kosong, Wajib diisi!`;
 
-        // pengolahan data agar mendapatkan hasil menggunakan rumus bmi
-        const bmi = (berat/(tinggiM * tinggiM)).toFixed(1)
+                // untuk animasi peringatan nya
+                validasi.classList.remove("shake");
+                void validasi.offsetWidth;
+                validasi.classList.add("shake")
+
+                // untuk merefresh isi hasilnya
+                indeksHasil.innerHTML = "??"; 
+                penjelasanHasil.innerHTML = "Berat badan mu itu kira-kira ideal ga ya?";
+
+                return;
+              }else{
+
+                validasi.innerHTML = ''
+                validasi.classList.remove("shake")    
+              }
+
+        
+        // untuk pengaturan mobile
+
+        main.classList.add("main")
 
         // memunculkan hasil nilai BMI 
         hasil.innerHTML = bmi;
@@ -75,9 +89,7 @@ button.addEventListener("click", function(Event){
         penjelasanHasil.innerHTML = explanation;
         
 
-              }
 
-
-
+return;
   
 })

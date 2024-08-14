@@ -21,7 +21,6 @@ main {
 aside {
     padding: 40px;
     padding-top: 2px;
-    width: 50%;
 }
 
 form {
@@ -93,4 +92,30 @@ button {
 /* css footer */
 footer {
     text-align: center ;
+}
+
+
+/* animasi */
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.5s ease;
+}
+
+/* untuk tampilan mobile */
+
+@media only screen and (max-width: 400px) {
+    main {
+        flex-direction: column;
+    }
+    .main {
+        flex-direction: column-reverse;
+    }    
 }
