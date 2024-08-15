@@ -24,7 +24,7 @@ button.addEventListener("click", function(){
         const pria = document.getElementById('pria');
         const wanita = document.getElementById('wanita');
         const validasi = document.getElementById('validasi');
-        const main = document.getElementById('main')
+        const main = document.getElementById('main-atas')
 
         // mengubah satuan tinggi badan dari cm menjadi m
         const tinggiM = tinggi/100;
@@ -57,10 +57,9 @@ button.addEventListener("click", function(){
                 validasi.classList.remove("shake")    
               }
 
-        
-        // untuk pengaturan mobile
 
-        main.classList.add("main")
+        main.id = '';
+        main.id = 'main-bawah';
 
         // memunculkan hasil nilai BMI 
         hasil.innerHTML = bmi;

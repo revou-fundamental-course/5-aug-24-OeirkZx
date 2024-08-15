@@ -112,10 +112,10 @@ footer {
 /* untuk tampilan mobile */
 
 @media only screen and (max-width: 400px) {
-    main {
+    #main-atas {
         flex-direction: column;
     }
-    .main {
+    #main-bawah {
         flex-direction: column-reverse;
     }    
 }
